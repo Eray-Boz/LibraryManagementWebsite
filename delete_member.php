@@ -1,0 +1,14 @@
+<?php
+require_once 'config/db.php';
+require_once 'includes/functions.php';
+requireLogin();
+
+if (isset($_GET['id'])) {
+    $id = (int) $_GET['id'];
+    $stmt = $conn->prepare("DELETE FROM members WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+}
+
+redirect('members.php');
+?>
