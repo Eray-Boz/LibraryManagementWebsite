@@ -1,4 +1,3 @@
-> **Created by: Eray Boz - B2205.010195**
 # Library App
 
 ## Installation
